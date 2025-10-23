@@ -1,11 +1,14 @@
 body{
     margin: 0;
+    padding: 0;
     height: 100vh;
     background-color: #2b3338;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'DS-Digital', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .summer-text,
@@ -14,23 +17,19 @@ body{
     font-style: italic;
 }
 
-.summer-text {
-    display: flex;
-    flex-direction: column;
-}
-
 .time-container{
     color: #c8d7da;
     font-size: clamp(60px, 14vw, 180px);
     font-weight: bold;
-    min-width: 10ch;
+    min-width: 300px;
     text-align: start;
-    padding-left: 50%;
-    transform: translateX(-30%);
+    align-self: self-start;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .centered-text {
-    text-align: center;
-    font-size: clamp(24px, 6vw, 73px);
+    font-size: clamp(24px, 6vw, 80px);
     color: #7c8573;
+    min-width: 10ch;
 }
