@@ -22,10 +22,10 @@ body{
     font-size: clamp(60px, 14vw, 180px);
     font-weight: bold;
     min-width: 300px;
-    text-align: start;
-    align-self: self-start;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+    align-content: center;
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
 }
 
 .centered-text {
