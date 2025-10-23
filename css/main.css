@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #2b3338;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DS-Digital', Arial, Helvetica, sans-serif;
+}
+
+.summer-text,
+.time-container {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.summer-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-container{
+    color: #c8d7da;
+    font-size: clamp(60px, 14vw, 180px);
+    font-weight: bold;
+    min-width: 11ch;
+    text-align: start;
+    padding-left: 12%;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: clamp(24px, 6vw, 73px);
+    color: #7c8573;
+}
+
+@media (max-width: 480px) {
+    .time-container {
+        padding-left: 5%;
+        min-width: auto;
+    }
+}
