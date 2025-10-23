@@ -19,17 +19,15 @@ body{
 
 .time-container{
     color: #c8d7da;
-    font-size: clamp(60px, 14vw, 180px);
+    font-size: clamp(40px, 14vw, 180px);
     font-weight: bold;
-    min-width: 300px;
+    min-width: 15ch;
     text-align: center;
     align-content: center;
-    /* margin-left: 50%;
-    transform: translateX(-50%); */
 }
 
 .centered-text {
-    font-size: clamp(24px, 6vw, 80px);
+    font-size: clamp(20px, 7vw, 80px);
     color: #7c8573;
     min-width: 10ch;
 }
