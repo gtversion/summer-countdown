@@ -30,8 +30,6 @@ function setTargets() {
     const now = new Date();
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
-    
-    console.log(month)
 
     if (month > 8 || month < 6) {
         targetStartDate = new Date(`${year + 1}-06-01T00:00:00`);
