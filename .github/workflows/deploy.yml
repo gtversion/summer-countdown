@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-    push:
-        branches: [main]
+  push:
+    branches: ["main"]
 
 permissions:
     contents: read
@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
     group: "pages"
-    cancel-in-progress: true
+    cancel-in-progress: false
 
 jobs:
     deploy:
@@ -29,7 +29,7 @@ jobs:
             - name: Upload site files
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: . # <- папка с твоими HTML/CSS/JS файлами
+                  path: . 
 
             - name: Deploy to GitHub Pages
               id: deployment
