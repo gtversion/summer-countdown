@@ -1,21 +1,31 @@
 let targetStartDate = new Date();
 let targetText = "";
+const timeContainerEl = document.querySelector('.js-time-here');
+
+function timeCicle() {
+    setTargets()
+    updateText()
+    updateCountDown();
+}
 
 function updateCountDown() {
-    
-    const timeContainerEl = document.querySelector('.js-time-here');
+
     const now = new Date();
 
     let diffMs = targetStartDate - now; // difference in milliseconds
-    const diffHours = (Math.floor(diffMs / (1000 * 60 * 60))).toString().padStart(2, '0');
+    const diffHours = formatString((Math.floor(diffMs / (1000 * 60 * 60))));
     diffMs -= diffHours * (1000 * 60 * 60);
 
-    const diffMinutes = (Math.floor(diffMs / (1000 * 60))).toString().padStart(2, '0');
+    const diffMinutes = formatString((Math.floor(diffMs / (1000 * 60))));
     diffMs -= diffMinutes * (1000 * 60);
 
-    const diffSeconds = (Math.floor(diffMs / 1000)).toString().padStart(2, '0');
+    const diffSeconds = formatString((Math.floor(diffMs / 1000)));
 
     timeContainerEl.innerHTML = `${diffHours}:${diffMinutes}:${diffSeconds}`;
+}
+
+function formatString(value) {
+    return value.toString().padStart(2, '0');
 }
 
 function updateText() {
@@ -31,17 +41,16 @@ function setTargets() {
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
 
-    if (month > 8 || month < 6) {
+    targetText = "left until a next summer";
+    
+    if (month > 8) {
         targetStartDate = new Date(`${year + 1}-06-01T00:00:00`);
-        targetText = "left until next summer";
+    } else if (month < 6) {
+        targetStartDate = new Date(`${year}-06-01T00:00:00`);
     } else {
         targetStartDate = new Date(`${year}-09-01T00:00:00`)
         targetText = "left before the end of the summer"
     }
 }
 
-setTargets()
-updateText()
-updateCountDown();
-
-setInterval(updateCountDown, 1000);
+setInterval(timeCicle, 1000);
