@@ -41,7 +41,7 @@ function setTargets() {
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
 
-    targetText = "left until next summer";
+    targetText = "left until the next summer";
     
     if (month > 8) {
         targetStartDate = new Date(`${year + 1}-06-01T00:00:00`);
@@ -49,7 +49,7 @@ function setTargets() {
         targetStartDate = new Date(`${year}-06-01T00:00:00`);
     } else {
         targetStartDate = new Date(`${year}-09-01T00:00:00`)
-        targetText = "left before the end of the summer"
+        targetText = "left before the end of this summer"
     }
 }
 
