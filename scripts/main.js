@@ -1,5 +1,6 @@
 let targetStartDate = new Date();
 let targetText = "";
+let summerText = "";
 const timeContainerEl = document.querySelector('.js-time-here');
 
 function timeCicle() {
@@ -32,7 +33,14 @@ function updateText() {
     const textContainerEl = document.querySelector(".js-text-here")
 
     if (textContainerEl) {
-        textContainerEl.innerHTML = targetText
+        textContainerEl.textContent = targetText
+    }
+
+    if (summerText) {
+        const summerTextEl = document.querySelector(".js-summer-here")
+        if (summerTextEl) {
+            summerTextEl.textContent = summerText
+        }
     }
 }
 
@@ -42,14 +50,17 @@ function setTargets() {
     const month = now.getMonth() + 1;
 
     targetText = "left until next summer";
-    
+    summerText = "";
+
     if (month > 8) {
         targetStartDate = new Date(`${year + 1}-06-01T00:00:00`);
     } else if (month < 6) {
         targetStartDate = new Date(`${year}-06-01T00:00:00`);
     } else {
-        targetStartDate = new Date(`${year}-09-01T00:00:00`)
-        targetText = "left before the end of this summer"
+        targetStartDate = new Date(`${year}-09-01T00:00:00`);
+
+        summerText = "It’s summer — enjoy it!";
+        targetText = "left before the end of this summer";
     }
 }
 
