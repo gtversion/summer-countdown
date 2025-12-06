@@ -41,8 +41,9 @@ body {
 }
 
 .copyright-text {
-    font-size: smaller;
-    color: #3d4f4f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    color: #c8d7da;
     margin-top: auto;
     margin-bottom: 1%;
 }
