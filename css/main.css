@@ -9,6 +9,7 @@ body {
     font-family: 'DS-Digital', Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .top {
